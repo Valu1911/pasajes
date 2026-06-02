@@ -1,0 +1,303 @@
+/* ==========================================================================
+   Contenedor Raíz y Estructura Base
+   ========================================================================== */
+.sitram-root {
+  font-family: 'Outfit', sans-serif;
+  min-height: 560px;
+  background: #1a2e4a;
+  display: flex;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ==========================================================================
+   Barra Lateral (Sidebar)
+   ========================================================================== */
+.sidebar {
+  width: 140px;
+  background: linear-gradient(160deg, #2d56a0 0%, #3b6dbf 55%, #2ab8a0 100%);
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Orbes decorativos de fondo en el menú */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.07);
+  pointer-events: none;
+}
+.orb1 { width: 160px; height: 160px; top: -60px; left: -50px; }
+.orb2 { width: 100px; height: 100px; bottom: -20px; right: -30px; }
+
+/* Logo del sistema */
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 8px 18px;
+  border-bottom: 0.5px solid rgba(255,255,255,0.2);
+  margin-bottom: 6px;
+  position: relative;
+}
+.sidebar-logo i { font-size: 20px; color: #fff; }
+.sidebar-logo span { font-size: 15px; font-weight: 700; color: #fff; letter-spacing: 1px; }
+
+/* Elementos de menú e ítems activos */
+.nav-item {
+  padding: 9px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s, color 0.2s;
+  font-weight: 400;
+  position: relative;
+}
+.nav-item:hover { background: rgba(255,255,255,0.12); color: #fff; }
+.nav-item.active { background: rgba(255,255,255,0.2); color: #fff; font-weight: 500; }
+.nav-item i { font-size: 16px; }
+
+/* Espaciador y botón de cerrar sesión */
+.nav-divider { flex: 1; }
+.nav-logout {
+  padding: 9px 12px;
+  border-radius: 10px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.55);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 0.5px solid rgba(255,255,255,0.2);
+  position: relative;
+}
+.nav-logout:hover { background: rgba(255,255,255,0.1); color: #fff; }
+.nav-logout i { font-size: 15px; }
+
+/* ==========================================================================
+   Contenido Principal (Main) y Distribución
+   ========================================================================== */
+.main {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #f0f4f8;
+  overflow: hidden;
+}
+
+/* Indicador de paso actual (Step) */
+.step-bar { display: flex; align-items: center; gap: 8px; }
+.step-badge {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: #2d56a0;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.step-title { font-size: 14px; font-weight: 600; color: #2d3748; letter-spacing: 0.3px; }
+
+/* Grid de distribución en dos columnas */
+.content-row {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 14px;
+  flex: 1;
+}
+.left-col { display: flex; flex-direction: column; gap: 10px; }
+.right-col { display: flex; flex-direction: column; gap: 10px; }
+
+/* ==========================================================================
+   Sección de Acciones, Boleto y Pagos (Columna Izquierda)
+   ========================================================================== */
+/* Grid de botones de la parte superior */
+.action-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+/* Botones estándar (OA, Nueva, Cancelar) */
+.solid-btn {
+  background: #fff;
+  border: 1px solid #dde3ee;
+  border-radius: 12px;
+  padding: 11px 14px;
+  color: #2d56a0;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Outfit', sans-serif;
+  transition: background 0.2s, border-color 0.2s;
+}
+.solid-btn:hover { background: #eef2fa; border-color: #3b6dbf; }
+.solid-btn i { font-size: 16px; }
+
+/* Variante de peligro para botón Cancelar */
+.solid-btn.danger { color: #c0392b; border-color: #f5c6c2; }
+.solid-btn.danger:hover { background: #fff5f4; border-color: #e74c3c; }
+
+/* Botón grande para Imprimir */
+.print-btn-large {
+  background: #fff;
+  border: 1px solid #dde3ee;
+  border-radius: 12px;
+  padding: 11px 14px;
+  color: #2d56a0;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-weight: 500;
+  transition: background 0.2s;
+  width: 100%;
+}
+.print-btn-large:hover { background: #eef2fa; }
+.print-btn-large i { font-size: 26px; color: #3b6dbf; }
+
+/* Contenedor central gris para simular la vista previa */
+.ticket-preview-box {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #dde3ee;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 80px;
+}
+.ticket-preview-box i { font-size: 30px; color: #c5d0e0; }
+.ticket-preview-box span { font-size: 12px; color: #9aabb8; }
+
+/* Fila de métodos de pago */
+.payment-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+.pay-btn {
+  background: #fff;
+  border: 1px solid #dde3ee;
+  border-radius: 10px;
+  padding: 8px 4px;
+  color: #4a6fa5;
+  font-family: 'Outfit', sans-serif;
+  font-size: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
+  transition: background 0.2s, border-color 0.2s;
+}
+.pay-btn:hover { background: #eef2fa; border-color: #3b6dbf; color: #2d56a0; }
+.pay-btn i { font-size: 16px; }
+
+/* Barra final de confirmación (Degradado Verde/Azul) */
+.confirm-bar {
+  background: linear-gradient(90deg, #2d56a0, #2ab8a0);
+  border: none;
+  border-radius: 12px;
+  padding: 13px 18px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  letter-spacing: 0.3px;
+  font-family: 'Outfit', sans-serif;
+  transition: opacity 0.2s;
+}
+.confirm-bar:hover { opacity: 0.9; }
+.confirm-bar i { font-size: 17px; }
+
+/* ==========================================================================
+   Tarjeta de Resumen de Viaje (Columna Derecha)
+   ========================================================================== */
+.summary-card {
+  background: #fff;
+  border: 1px solid #dde3ee;
+  border-radius: 14px;
+  padding: 14px;
+  flex: 1;
+}
+.summary-title {
+  font-size: 10px;
+  font-weight: 600;
+  color: #9aabb8;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+/* Campos de datos clave (Fecha, Origen, Destino) */
+.summary-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 7px;
+}
+.field-label { font-size: 11px; color: #8a9ab0; font-weight: 400; }
+.field-value { font-size: 12px; color: #2d3748; font-weight: 500; text-align: right; }
+
+.summary-divider { height: 0.5px; background: #e8edf5; margin: 10px 0; }
+
+/* Tarjeta interna verde para los datos específicos de la empresa */
+.entity-badge {
+  background: #f0faf8;
+  border: 1px solid #c0e8e2;
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+}
+.entity-row { font-size: 11px; color: #2a7a6a; margin-bottom: 2px; font-weight: 500; }
+.entity-row:last-child { margin-bottom: 0; }
+
+/* Filas con precio e ítems individuales */
+.line-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #6b7a90;
+  margin-bottom: 4px;
+}
+
+/* Sección de costo total */
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f0f4f8;
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-top: 6px;
+}
+.total-label { font-size: 12px; font-weight: 600; color: #2d3748; }
+.total-value { font-size: 15px; font-weight: 700; color: #2ab8a0; }

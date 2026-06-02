@@ -1,11 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SITRAM — Vista previa del boleto</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+
+  <h2 class="sr-only">SITRAM — Vista previa del boleto. Panel con resumen del viaje, opciones de acción y métodos de pago.</h2>
+
+  <div class="sitram-root">
+    <nav class="sidebar">
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="sidebar-logo">
+        <i class="ti ti-bus" aria-hidden="true"></i>
+        <span>SITRAM</span>
+      </div>
+      <div class="nav-item"><i class="ti ti-home" aria-hidden="true"></i>Inicio</div>
+      <div class="nav-item"><i class="ti ti-calendar-event" aria-hidden="true"></i>Reservas</div>
+      <div class="nav-item active"><i class="ti ti-clock" aria-hidden="true"></i>Horarios</div>
+      <div class="nav-item"><i class="ti ti-users" aria-hidden="true"></i>Pasajeros</div>
+      <div class="nav-divider"></div>
+      <div class="nav-logout"><i class="ti ti-logout" aria-hidden="true"></i>Cerrar sesión</div>
+    </nav>
+
+    <div class="main">
+      <div class="step-bar">
+        <div class="step-badge">4</div>
+        <span class="step-title">Vista previa del boleto</span>
+      </div>
+
+      <div class="content-row">
+        <div class="left-col">
+          <div class="action-grid">
+            <button class="solid-btn"><i class="ti ti-ticket" aria-hidden="true"></i>OA</button>
+            <button class="solid-btn"><i class="ti ti-plus" aria-hidden="true"></i>Nueva</button>
+            <button class="solid-btn danger"><i class="ti ti-x" aria-hidden="true"></i>Cancelar</button>
+            <button class="print-btn-large" aria-label="Imprimir boleto">
+              <i class="ti ti-printer" aria-hidden="true"></i>
+              Imprimir
+            </button>
+          </div>
+
+          <div class="ticket-preview-box">
+            <i class="ti ti-file-text" aria-hidden="true"></i>
+            <span>Vista previa del boleto</span>
+          </div>
+
+          <div class="payment-row">
+            <button class="pay-btn"><i class="ti ti-cash" aria-hidden="true"></i>Efectivo</button>
+            <button class="pay-btn"><i class="ti ti-arrows-exchange" aria-hidden="true"></i>Trans.</button>
+            <button class="pay-btn"><i class="ti ti-building-bank" aria-hidden="true"></i>Cta. cte.</button>
+            <button class="pay-btn"><i class="ti ti-credit-card" aria-hidden="true"></i>Tarjeta</button>
+          </div>
+
+          <button class="confirm-bar">
+            <i class="ti ti-check" aria-hidden="true"></i>
+            Confirmar venta e imprimir
+          </button>
+        </div>
+
+        <div class="right-col">
+          <div class="summary-card">
+            <div class="summary-title">Resumen</div>
+            <div class="summary-field">
+              <span class="field-label">Fecha</span>
+              <span class="field-value">12/12/26</span>
+            </div>
+            <div class="summary-field">
+              <span class="field-label">Origen</span>
+              <span class="field-value">Porte</span>
+            </div>
+            <div class="summary-field">
+              <span class="field-label">Destino</span>
+              <span class="field-value">Bara</span>
+            </div>
+            <div class="summary-field">
+              <span class="field-label">Servicio</span>
+              <span class="field-value">15:30</span>
+            </div>
+            <div class="summary-divider"></div>
+            <div class="entity-badge">
+              <div class="entity-row">Empresa: —</div>
+              <div class="entity-row">Unidad: —</div>
+              <div class="entity-row">Asiento: —</div>
+            </div>
+            <div class="summary-divider"></div>
+            <div class="line-item"><span>1 Adulto</span><span>$ —</span></div>
+            <div class="line-item"><span>1 Abuelo/a</span><span>$ —</span></div>
+            <div class="line-item"><span>1 Disc.</span><span>$ —</span></div>
+            <div class="total-row">
+              <span class="total-label">Total</span>
+              <span class="total-value">$ 0.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
