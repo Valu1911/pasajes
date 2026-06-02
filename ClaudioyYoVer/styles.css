@@ -3,12 +3,21 @@
    ========================================================================== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
 .root {
   font-family: 'Outfit', sans-serif;
   display: flex;
-  height: 520px;
+  height: 100vh;
+  width: 100vw;
   background: #f0f4f8;
-  border-radius: 16px;
+  border-radius: 0;
   overflow: hidden;
 }
 
