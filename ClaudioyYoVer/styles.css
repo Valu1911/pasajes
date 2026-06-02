@@ -1,0 +1,165 @@
+/* ==========================================================================
+   Estructura Global Reset y Raíz
+   ========================================================================== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.root {
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  height: 520px;
+  background: #f0f4f8;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Barra Lateral (Menu con prefijo s-)
+   ========================================================================== */
+.sidebar {
+  width: 150px;
+  background: linear-gradient(160deg, #2d56a0 0%, #3b6dbf 55%, #2ab8a0 100%);
+  display: flex;
+  flex-direction: column;
+  padding: 18px 12px;
+  gap: 4px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+/* Efectos de luces de fondo */
+.s-orb { position: absolute; border-radius: 50%; background: rgba(255,255,255,0.07); pointer-events: none; }
+.s-orb1 { width: 150px; height: 150px; top: -55px; left: -45px; }
+.s-orb2 { width: 90px; height: 90px; bottom: -20px; right: -25px; }
+
+.s-logo {
+  display: flex; align-items: center; gap: 8px; padding: 0 6px 14px;
+  border-bottom: 0.5px solid rgba(255,255,255,0.2); margin-bottom: 8px; position: relative;
+}
+.s-logo i { font-size: 20px; color: #fff; }
+.s-logo span { font-size: 14px; font-weight: 700; color: #fff; letter-spacing: 1px; }
+
+.s-item {
+  padding: 9px 10px; border-radius: 10px; font-size: 12px; color: rgba(255,255,255,0.65);
+  cursor: pointer; display: flex; align-items: center; gap: 8px;
+  transition: background 0.2s, color 0.2s; position: relative;
+}
+.s-item:hover { background: rgba(255,255,255,0.12); color: #fff; }
+.s-item.active { background: rgba(255,255,255,0.2); color: #fff; font-weight: 500; }
+.s-item i { font-size: 15px; }
+
+.s-spacer { flex: 1; }
+
+.s-logout {
+  padding: 9px 10px; border-radius: 10px; font-size: 11px; color: rgba(255,255,255,0.55);
+  cursor: pointer; display: flex; align-items: center; gap: 8px;
+  border: 0.5px solid rgba(255,255,255,0.2); position: relative;
+}
+.s-logout:hover { background: rgba(255,255,255,0.1); color: #fff; }
+.s-logout i { font-size: 14px; }
+
+/* ==========================================================================
+   Contenedor y Barra Superior (Main / Topbar)
+   ========================================================================== */
+.main { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+
+.topbar { background: #fff; border-bottom: 1px solid #dde3ee; padding: 10px 18px; display: flex; align-items: center; gap: 8px; }
+.step-badge {
+  width: 24px; height: 24px; border-radius: 50%; background: #2d56a0; color: #fff;
+  font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.step-title { font-size: 13px; font-weight: 600; color: #2d3748; }
+
+/* Distribución del espacio de trabajo en 3 columnas rígidas */
+.body { flex: 1; display: grid; grid-template-columns: 130px 1fr 200px; gap: 0; overflow: hidden; }
+
+/* ==========================================================================
+   Columna 1: Acciones Operativas (Izquierda)
+   ========================================================================== */
+.col-left { background: #fff; border-right: 1px solid #dde3ee; padding: 14px 10px; display: flex; flex-direction: column; gap: 8px; }
+
+.act-btn {
+  background: #f0f4f8; border: 1px solid #dde3ee; border-radius: 10px; padding: 0; height: 52px;
+  color: #2d56a0; font-size: 12px; font-weight: 500; cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  font-family: 'Outfit', sans-serif; transition: background 0.2s, border-color 0.2s; width: 100%;
+}
+.act-btn:hover { background: #e4eaf5; border-color: #3b6dbf; }
+.act-btn i { font-size: 17px; }
+
+/* Botón Cancelar (Peligro) */
+.act-btn.danger { color: #c0392b; border-color: #f5c6c2; }
+.act-btn.danger:hover { background: #fff5f4; border-color: #e74c3c; }
+
+/* Botón Imprimir Destacado abajo */
+.act-btn.print { height: 64px; background: #eef2fa; border-color: #c5d3ea; color: #2d56a0; }
+.act-btn.print i { font-size: 24px; color: #3b6dbf; }
+.act-btn.print:hover { background: #dde6f5; }
+
+.col-left-spacer { flex: 1; }
+
+/* ==========================================================================
+   Columna 2: Simulador de Ticket y Pagos (Centro)
+   ========================================================================== */
+.col-center { background: #f8fafc; display: flex; flex-direction: column; overflow: hidden; }
+.preview-area { flex: 1; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; padding: 16px; border-bottom: 1px solid #dde3ee; }
+
+/* Maqueta física del Boleto */
+
+/* Ruta de viaje del Ticket */
+.ticket-route { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; }
+.route-city { font-size: 13px; font-weight: 600; color: #2d3748; }
+.route-arrow { flex: 1; display: flex; align-items: center; gap: 4px; }
+.route-line { flex: 1; height: 1px; background: #dde3ee; }
+.route-arrow i { font-size: 13px; color: #3b6dbf; }
+
+.ticket-row { display: flex; justify-content: space-between; font-size: 10px; color: #8a9ab0; margin-bottom: 4px; }
+.ticket-row span:last-child { color: #2d3748; font-weight: 500; }
+
+.ticket-footer { border-top: 1px dashed #dde3ee; padding-top: 10px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center; }
+.ticket-seat { background: #eef2fa; border-radius: 6px; padding: 4px 10px; font-size: 11px; font-weight: 600; color: #2d56a0; display: flex; align-items: center; gap: 4px; }
+.ticket-seat i { font-size: 13px; }
+.ticket-total { font-size: 13px; font-weight: 700; color: #2ab8a0; }
+
+/* Panel inferior central */
+.center-bottom { background: #fff; border-top: 1px solid #dde3ee; padding: 10px 14px; display: flex; flex-direction: column; gap: 8px; }
+.pay-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.pay-btn {
+  background: #f0f4f8; border: 1px solid #dde3ee; border-radius: 8px; padding: 7px 4px; color: #4a6fa5;
+  font-family: 'Outfit', sans-serif; font-size: 10px; cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  font-weight: 500; transition: background 0.2s, border-color 0.2s;
+}
+.pay-btn:hover { background: #e4eaf5; border-color: #3b6dbf; color: #2d56a0; }
+.pay-btn i { font-size: 15px; }
+
+.confirm-btn {
+  background: linear-gradient(90deg, #2d56a0, #2ab8a0); border: none; border-radius: 10px; padding: 11px 16px;
+  color: #fff; font-size: 13px; font-weight: 600; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  font-family: 'Outfit', sans-serif; transition: opacity 0.2s; width: 100%;
+}
+.confirm-btn:hover { opacity: 0.9; }
+.confirm-btn i { font-size: 16px; }
+
+/* ==========================================================================
+   Columna 3: Desglose de Liquidación (Derecha con prefijo sum- / f- / e-)
+   ========================================================================== */
+.col-right { background: #fff; border-left: 1px solid #dde3ee; padding: 14px 12px; display: flex; flex-direction: column; gap: 0; overflow-y: auto; }
+.sum-title { font-size: 10px; font-weight: 600; color: #9aabb8; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 12px; }
+
+.sum-field { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 7px; }
+.f-label { font-size: 11px; color: #8a9ab0; }
+.f-value { font-size: 11px; color: #2d3748; font-weight: 500; text-align: right; }
+
+.sum-divider { height: 0.5px; background: #e8edf5; margin: 10px 0; }
+
+.entity-badge { background: #f0faf8; border: 1px solid #c0e8e2; border-radius: 8px; padding: 8px 10px; margin-bottom: 10px; }
+.e-row { font-size: 11px; color: #2a7a6a; margin-bottom: 3px; font-weight: 500; }
+.e-row:last-child { margin-bottom: 0; }
+
+.line-item { display: flex; justify-content: space-between; font-size: 11px; color: #6b7a90; margin-bottom: 5px; }
+.sum-spacer { flex: 1; }
+
+.total-row { display: flex; justify-content: space-between; align-items: center; background: #f0f4f8; border-radius: 8px; padding: 9px 10px; margin-top: 6px; }
+.t-label { font-size: 12px; font-weight: 600; color: #2d3748; }
+.t-value { font-size: 15px; font-weight: 700; color: #2ab8a0; }

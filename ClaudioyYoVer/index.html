@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SITRAM — Layout Original Mejorado</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+  <div class="root">
+
+    <nav class="sidebar">
+      <div class="s-orb s-orb1"></div>
+      <div class="s-orb s-orb2"></div>
+      <div class="s-logo">
+        <i class="ti ti-bus" aria-hidden="true"></i>
+        <span>SITRAM</span>
+      </div>
+      <div class="s-item"><i class="ti ti-home" aria-hidden="true"></i>Inicio</div>
+      <div class="s-item"><i class="ti ti-calendar-event" aria-hidden="true"></i>Reservas</div>
+      <div class="s-item active"><i class="ti ti-clock" aria-hidden="true"></i>Horarios</div>
+      <div class="s-item"><i class="ti ti-users" aria-hidden="true"></i>Pasajeros</div>
+      <div class="s-spacer"></div>
+      <div class="s-logout"><i class="ti ti-logout" aria-hidden="true"></i>Cerrar sesión</div>
+    </nav>
+
+    <div class="main">
+
+      <div class="topbar">
+        <div class="step-badge">4</div>
+        <span class="step-title">Vista previa del boleto</span>
+      </div>
+
+      <div class="body">
+
+        <div class="col-left">
+          <button class="act-btn"><i class="ti ti-ticket" aria-hidden="true"></i>OA</button>
+          <button class="act-btn"><i class="ti ti-plus" aria-hidden="true"></i>Nueva</button>
+          <button class="act-btn danger"><i class="ti ti-x" aria-hidden="true"></i>Cancelar</button>
+          <div class="col-left-spacer"></div>
+          <button class="act-btn print" aria-label="Imprimir">
+            <i class="ti ti-printer" aria-hidden="true"></i>
+            Imprimir
+          </button>
+        </div>
+
+        <div class="col-center">
+          <div class="preview-area">
+            
+          </div>
+
+          <div class="center-bottom">
+            <div class="pay-row">
+              <button class="pay-btn"><i class="ti ti-cash" aria-hidden="true"></i>Efectivo</button>
+              <button class="pay-btn"><i class="ti ti-arrows-exchange" aria-hidden="true"></i>Trans.</button>
+              <button class="pay-btn"><i class="ti ti-building-bank" aria-hidden="true"></i>Cta. cte.</button>
+              <button class="pay-btn"><i class="ti ti-credit-card" aria-hidden="true"></i>Tarjeta</button>
+            </div>
+            <button class="confirm-btn">
+              <i class="ti ti-check" aria-hidden="true"></i>
+              Confirmar venta e imprimir
+            </button>
+          </div>
+        </div>
+
+        <div class="col-right">
+          <div class="sum-title">Resumen</div>
+
+          <div class="sum-field">
+            <span class="f-label">Fecha</span>
+            <span class="f-value">12/12/26</span>
+          </div>
+          <div class="sum-field">
+            <span class="f-label">Origen</span>
+            <span class="f-value">Porte</span>
+          </div>
+          <div class="sum-field">
+            <span class="f-label">Destino</span>
+            <span class="f-value">Bara</span>
+          </div>
+          <div class="sum-field">
+            <span class="f-label">Servicio</span>
+            <span class="f-value">15:30</span>
+          </div>
+
+          <div class="sum-divider"></div>
+
+          <div class="entity-badge">
+            <div class="e-row">Empresa: —</div>
+            <div class="e-row">Unidad: —</div>
+            <div class="e-row">Asiento: —</div>
+          </div>
+
+          <div class="sum-divider"></div>
+
+          <div class="line-item"><span>1 Adulto</span><span>$ —</span></div>
+          <div class="line-item"><span>1 Abuelo/a</span><span>$ —</span></div>
+          <div class="line-item"><span>1 Disc.</span><span>$ —</span></div>
+
+          <div class="sum-spacer"></div>
+
+          <div class="total-row">
+            <span class="t-label">Total</span>
+            <span class="t-value">$ 0.00</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
