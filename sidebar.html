@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SITRAM - Inicio</title>
+    <!-- Iconos de Google Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- SIDEBAR CON EL DEGRADADO EXACTO -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span class="material-symbols-outlined icon-bus">directions_bus</span>
+                <h1 class="brand-title">SITRAM</h1>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">
+                    <span class="material-symbols-outlined">home</span>
+                    Inicio
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="material-symbols-outlined">calendar_month</span>
+                    Reservas
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="material-symbols-outlined">schedule</span>
+                    Horarios
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="material-symbols-outlined">group</span>
+                    Pasajeros
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button class="btn-logout">
+                    <span class="material-symbols-outlined">logout</span>
+                    Cerrar sesión
+                </button>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            
+            <!-- HEADER DE BIENVENIDA -->
+            <header class="content-header">
+                <div class="welcome-text">
+                    <h2>Panel de Control</h2>
+                    <p>Terminal de Venta - Municipio de Baradero</p>
+                </div>
+                <div class="system-status">
+                    <span class="status-indicator"></span> Operador Activo
+                </div>
+            </header>
+
+            <!-- IMAGEN HORIZONTAL AGRANDADA Y OPTIMIZADA -->
+            <section class="home-banner-horizontal">
+                <div class="banner-overlay"></div>
+                <div class="banner-content">
+                    <h3>Conectando el Municipio</h3>
+                    <p>Baradero • Alsina • Portela • Coloma</p>
+                    <div class="route-tags">
+                        <span class="tag">Interurbano</span>
+                        <span class="tag">Gestión Interna Privada</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4 BOTONES EN HORIZONTAL INFERIOR -->
+            <section class="quick-actions-horizontal">
+                <h3 class="acceso">Accesos Rápidos</h3>
+                <div class="grid-actions-horizontal">
+                    
+                    <button class="action-card btn-vender" onclick="navigate('vender')">
+                        <div class="card-icon-wrapper">
+                            <span class="material-symbols-outlined">confirmation_number</span>
+                        </div>
+                        <div class="card-info">
+                            <h4>Vender Pasajes</h4>
+                            <p>Emitir boletos para Alsina, Portela, Coloma o Baradero.</p>
+                        </div>
+                    </button>
+
+                    
+                    <button class="action-card btn-reservas" onclick="navigate('reservas')">
+                        <div class="card-icon-wrapper">
+                            <span class="material-symbols-outlined">book_online</span>
+                        </div>
+                        <div class="card-info">
+                            <h4>Pasajes Reservados</h4>
+                            <p>Administrar, confirmar o modificar reservas del sistema.</p>
+                        </div>
+                    </button>
+
+                    <button class="action-card btn-cancelar" onclick="navigate('cancelar')">
+                        <div class="card-icon-wrapper">
+                            <span class="material-symbols-outlined">cancel</span>
+                        </div>
+                        <div class="card-info">
+                            <h4>Cancelar Pasajes</h4>
+                            <p>Dar de baja boletos emitidos y gestionar devoluciones.</p>
+                        </div>
+                    </button>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
