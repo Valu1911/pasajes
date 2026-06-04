@@ -84,12 +84,12 @@ html, body {
 /* ==========================================================================
    Columna 1: Acciones Operativas (Izquierda)
    ========================================================================== */
-.col-left { background: #fff; border-right: 1px solid #dde3ee; padding: 14px 10px; display: flex; flex-direction: column; gap: 8px; }
+.col-left { background: #fff; border-right: 1px solid #dde3ee; padding: 14px 10px; display: flex; flex-direction: column; gap: 10px; justify-content: center; alingn-items: center; }
 
 .act-btn {
-  background: #f0f4f8; border: 1px solid #dde3ee; border-radius: 10px; padding: 0; height: 52px;
+  background: #f0f4f8; border: 1px solid #dde3ee; border-radius: 10px; padding: 10px; height: 125px;
   color: #2d56a0; font-size: 12px; font-weight: 500; cursor: pointer;
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
   font-family: 'Outfit', sans-serif; transition: background 0.2s, border-color 0.2s; width: 100%;
 }
 .act-btn:hover { background: #e4eaf5; border-color: #3b6dbf; }
@@ -99,12 +99,7 @@ html, body {
 .act-btn.danger { color: #c0392b; border-color: #f5c6c2; }
 .act-btn.danger:hover { background: #fff5f4; border-color: #e74c3c; }
 
-/* Botón Imprimir Destacado abajo */
-.act-btn.print { height: 64px; background: #eef2fa; border-color: #c5d3ea; color: #2d56a0; }
-.act-btn.print i { font-size: 24px; color: #3b6dbf; }
-.act-btn.print:hover { background: #dde6f5; }
 
-.col-left-spacer { flex: 1; }
 
 /* ==========================================================================
    Columna 2: Simulador de Ticket y Pagos (Centro)

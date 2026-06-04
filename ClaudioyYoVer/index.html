@@ -4,7 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SITRAM — Layout Original Mejorado</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap">
+  
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,7 +26,7 @@
       <div class="s-item"><i class="ti ti-home" aria-hidden="true"></i>Inicio</div>
       <div class="s-item"><i class="ti ti-calendar-event" aria-hidden="true"></i>Reservas</div>
       <div class="s-item active"><i class="ti ti-clock" aria-hidden="true"></i>Horarios</div>
-      <div class="s-item"><i class="ti ti-users" aria-hidden="true"></i>Pasajeros</div>
+      <div class="s-item"><i class="ti ti-users" aria-hidden="true"></i>Historial</div>
       <div class="s-spacer"></div>
       <div class="s-logout"><i class="ti ti-logout" aria-hidden="true"></i>Cerrar sesión</div>
     </nav>
@@ -37,16 +41,19 @@
       <div class="body">
 
         <div class="col-left">
-          <button class="act-btn"><i class="ti ti-ticket" aria-hidden="true"></i>OA</button>
-          <button class="act-btn"><i class="ti ti-plus" aria-hidden="true"></i>Nueva</button>
-          <button class="act-btn danger"><i class="ti ti-x" aria-hidden="true"></i>Cancelar</button>
-          <div class="col-left-spacer"></div>
-          <button class="act-btn print" aria-label="Imprimir">
+          
+          <button class="act-btn"><i class="ti ti-plus" aria-hidden="false"></i>Nueva</button>
+          
+          <button class="act-btn"><i class="ti ti-download" aria-hidden="true"></i>Descargar</button>
+          
+          <button class="act-btn" aria-label="Imprimir">
             <i class="ti ti-printer" aria-hidden="true"></i>
             Imprimir
           </button>
-        </div>
 
+          <button class="act-btn danger"><i class="ti ti-x" aria-hidden="true"></i>Cancelar</button>
+          
+        </div>
         <div class="col-center">
           <div class="preview-area">
             
@@ -55,8 +62,8 @@
           <div class="center-bottom">
             <div class="pay-row">
               <button class="pay-btn"><i class="ti ti-cash" aria-hidden="true"></i>Efectivo</button>
-              <button class="pay-btn"><i class="ti ti-arrows-exchange" aria-hidden="true"></i>Trans.</button>
-              <button class="pay-btn"><i class="ti ti-building-bank" aria-hidden="true"></i>Cta. cte.</button>
+              <button class="pay-btn"><i class="ti ti-arrows-exchange" aria-hidden="true"></i>Transferencia</button>
+              <button class="pay-btn"><i class="ti ti-building-bank" aria-hidden="true"></i>Cuenta corriente</button>
               <button class="pay-btn"><i class="ti ti-credit-card" aria-hidden="true"></i>Tarjeta</button>
             </div>
             <button class="confirm-btn">
@@ -96,9 +103,10 @@
 
           <div class="sum-divider"></div>
 
-          <div class="line-item"><span>1 Adulto</span><span>$ —</span></div>
-          <div class="line-item"><span>1 Abuelo/a</span><span>$ —</span></div>
-          <div class="line-item"><span>1 Disc.</span><span>$ —</span></div>
+          <div class="line-item"><span>Cantidad de pasajes</span><span> —</span></div>
+          <div class="line-item"><span>Descuento disca</span><span>$ —</span></div>
+          <div class="line-item"><span>Descuento jubi</span><span>$ —</span></div>
+
 
           <div class="sum-spacer"></div>
 
